@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- robots.txt: Allow all -->
+  <!-- Sitemap: /sitemap.xml -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobsWebsites | We Build Websites That Build Businesses</title>
+  <meta name="description" content="JobsWebsites is a professional web development company that helps individuals and small businesses build SEO-friendly, high-performance, and visually stunning websites. We focus on delivering websites that attract, engage, and convert visitors." />
+  <meta name="keywords" content="website development, web design, SEO, business website, affordable website packages, JobsWebsites" />
+  <link rel="canonical" href="https://www.jobswebsites.com/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="JobsWebsites | We Build Websites That Build Businesses" />
+  <meta property="og:description" content="JobsWebsites builds SEO-friendly, high-performance, and visually stunning websites for individuals and small businesses." />
+  <meta property="og:url" content="https://www.jobswebsites.com/" />
+  <meta property="og:site_name" content="JobsWebsites" />
+  <meta property="og:image" content="https://www.jobswebsites.com/og-image.jpg" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JobsWebsites | We Build Websites That Build Businesses" />
+  <meta name="twitter:description" content="JobsWebsites builds SEO-friendly, high-performance, and visually stunning websites for individuals and small businesses." />
+  <meta name="twitter:site" content="@jobswebsites" />
+  <meta name="twitter:image" content="https://www.jobswebsites.com/og-image.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "JobsWebsites",
+    "url": "https://www.jobswebsites.com/",
+    "logo": "https://www.jobswebsites.com/logo.png",
+    "sameAs": [
+      "https://twitter.com/jobswebsites",
+      "https://www.linkedin.com/company/jobswebsites",
+      "https://github.com/jobswebsites"
+    ],
+    "description": "JobsWebsites is a professional web development company that helps individuals and small businesses build SEO-friendly, high-performance, and visually stunning websites."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JobsWebsites",
+    "url": "https://www.jobswebsites.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.jobswebsites.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', Arial, sans-serif; }
+    /* Custom scrollbar for accessibility */
+    ::-webkit-scrollbar { width: 8px; background: #e0f2f1; }
+    ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 8px; }
+  </style>
+</head>
+<body class="antialiased bg-gradient-to-br from-white via-emerald-50 to-emerald-100 text-slate-800">
+
+  <!-- Navbar -->
+  <header>
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-emerald-100 transition-all duration-300 shadow-none">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#" class="flex items-center gap-2 font-extrabold text-2xl text-emerald-700 tracking-tight" aria-label="JobsWebsites Home">
+          <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="url(#logo-gradient)" />
+            <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="18" font-family="Inter" font-weight="bold" dy=".3em">JW</text>
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#10b981"/>
+                <stop offset="1" stop-color="#34d399"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="bg-gradient-to-r from-emerald-600 to-emerald-400 bg-clip-text text-transparent">JobsWebsites</span>
+        </a>
+        <ul class="hidden md:flex gap-8 font-semibold text-slate-700 text-base">
+          <li><a href="#home" class="hover:text-emerald-600 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-emerald-600 transition">About</a></li>
+          <li><a href="#services" class="hover:text-emerald-600 transition">Services</a></li>
+          <li><a href="#portfolio" class="hover:text-emerald-600 transition">Portfolio</a></li>
+          <li><a href="#contact" class="hover:text-emerald-600 transition">Contact</a></li>
+        </ul>
+        <!-- Mobile menu button -->
+        <button id="menu-btn" class="md:hidden flex items-center text-emerald-700 focus:outline-none" aria-label="Open Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="md:hidden fixed left-0 right-0 top-0 h-screen w-full bg-white z-40 flex flex-col items-center justify-start pt-[72px] gap-2 text-lg font-semibold text-emerald-800 hidden shadow-2xl transition-all duration-300">
+        <button id="close-menu" class="absolute top-4 right-4 text-emerald-700 hover:text-emerald-500 transition" aria-label="Close Menu">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="11" fill="#10b981" opacity="0.10"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+        <nav class="flex flex-col items-center w-full max-w-xs mx-auto gap-2">
+          <a href="#home" class="w-full text-center py-3 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition" onclick="closeMenu()">Home</a>
+          <a href="#about" class="w-full text-center py-3 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition" onclick="closeMenu()">About</a>
+          <a href="#services" class="w-full text-center py-3 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition" onclick="closeMenu()">Services</a>
+          <a href="#portfolio" class="w-full text-center py-3 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition" onclick="closeMenu()">Portfolio</a>
+          <a href="#contact" class="w-full text-center py-3 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition" onclick="closeMenu()">Contact</a>
+        </nav>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 md:pt-40 pb-20 bg-gradient-to-br from-emerald-600 via-emerald-500 to-emerald-400 overflow-hidden">
+      <!-- Abstract background pattern -->
+      <div class="absolute inset-0 pointer-events-none">
+        <svg class="absolute left-1/2 top-0 -translate-x-1/2 opacity-20" width="1200" height="600" fill="none" aria-hidden="true">
+          <ellipse cx="600" cy="300" rx="600" ry="300" fill="url(#hero-grad1)"/>
+          <defs>
+            <linearGradient id="hero-grad1" x1="0" y1="0" x2="1200" y2="600" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#6ee7b7"/>
+              <stop offset="1" stop-color="#a7f3d0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left" data-aos="fade-right">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-lg">
+            We Build Websites<br class="hidden md:block"/> That <span class="bg-gradient-to-r from-emerald-200 via-white to-emerald-200 bg-clip-text text-transparent">Build Businesses</span>
+          </h1>
+          <p class="text-lg md:text-xl text-emerald-100 mb-8 font-medium max-w-xl mx-auto md:mx-0">
+            JobsWebsites helps you launch SEO-friendly, high-performance, and visually stunning websites that attract, engage, and convert.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#contact" class="px-8 py-3 rounded-2xl bg-white text-emerald-700 font-bold text-lg shadow-lg hover:bg-emerald-50 transition-all duration-200 focus:scale-95 active:scale-95" aria-label="Get Started">
+              Get Started
+            </a>
+            <a href="#about" class="px-8 py-3 rounded-2xl bg-emerald-700 text-white font-bold text-lg shadow-lg hover:bg-emerald-800 transition-all duration-200 focus:scale-95 active:scale-95" aria-label="Contact Us">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+               alt="Modern web development illustration"
+               class="w-full max-w-md rounded-2xl shadow-2xl border-4 border-emerald-200"
+               loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-up">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+               alt="Teamwork at JobsWebsites"
+               class="w-full rounded-2xl shadow-xl border-4 border-emerald-100"
+               loading="lazy" />
+        </div>
+        <div data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-emerald-700 mb-4">About JobsWebsites</h2>
+          <p class="text-lg text-slate-700 mb-4">
+            At <strong>JobsWebsites</strong>, we believe every business deserves a powerful online presence. Our mission is to empower individuals and small businesses with <span class="text-emerald-600 font-semibold">SEO-friendly</span>, <span class="text-emerald-600 font-semibold">high-performance</span>, and <span class="text-emerald-600 font-semibold">visually stunning</span> websites.
+          </p>
+          <ul class="list-disc pl-6 text-slate-600 space-y-2">
+            <li>Custom website development tailored to your brand</li>
+            <li>Affordable packages for startups and entrepreneurs</li>
+            <li>Focus on accessibility, speed, and conversion</li>
+            <li>Ongoing support and transparent communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-emerald-50 via-white to-emerald-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-12" data-aos="fade-up">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-emerald-100 p-4 rounded-full mb-4">
+              <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V7" />
+                <path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-emerald-700 mb-2">Website Development</h3>
+            <p class="text-slate-600">Custom, responsive websites built for speed, SEO, and conversion.</p>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-emerald-100 p-4 rounded-full mb-4">
+              <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                <path d="M12 12V4l9 5-9 5-9-5 9-5z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-emerald-700 mb-2">Web Design</h3>
+            <p class="text-slate-600">Modern, visually stunning designs that reflect your brand identity.</p>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-emerald-100 p-4 rounded-full mb-4">
+              <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 17l4 4 4-4m-4-5v9" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-emerald-700 mb-2">SEO Optimization</h3>
+            <p class="text-slate-600">Boost your Google ranking and reach more customers organically.</p>
+          </div>
+          <!-- Service 4 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-emerald-100 p-4 rounded-full mb-4">
+              <svg class="w-10 h-10 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-emerald-700 mb-2">Affordable Packages</h3>
+            <p class="text-slate-600">Flexible pricing for individuals, startups, and small businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-12" data-aos="fade-up">Our Portfolio</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: Modern Business Website"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">Modern Business Website</h3>
+              <p class="text-slate-600">A sleek, responsive site for a consulting firm, optimized for SEO and conversions.</p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: E-commerce Platform"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">E-commerce Platform</h3>
+              <p class="text-slate-600">A fast, mobile-friendly online store with secure checkout and product management.</p>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: Personal Portfolio"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">Personal Portfolio</h3>
+              <p class="text-slate-600">A creative, visually engaging portfolio for a freelance designer.</p>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: Restaurant Website"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">Restaurant Website</h3>
+              <p class="text-slate-600">A mouth-watering site for a local restaurant, featuring menus and online booking.</p>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="500">
+            <img src="https://images.unsplash.com/photo-1461344577544-4e5dc9487184?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: Nonprofit Organization"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">Nonprofit Organization</h3>
+              <p class="text-slate-600">A donation-ready, accessible site for a nonprofit, built for community impact.</p>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="bg-emerald-50 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?auto=format&fit=crop&w=600&q=80"
+                 alt="Portfolio project: Event Landing Page"
+                 class="w-full h-48 object-cover"
+                 loading="lazy" />
+            <div class="p-6">
+              <h3 class="font-bold text-lg text-emerald-700 mb-2">Event Landing Page</h3>
+              <p class="text-slate-600">A high-converting landing page for a tech conference, with registration and schedule.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gradient-to-br from-emerald-50 via-white to-emerald-50">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-12" data-aos="fade-up">What Our Clients Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client Michael Lee" class="w-16 h-16 rounded-full mb-4 border-4 border-emerald-100" loading="lazy"/>
+            <p class="text-slate-700 mb-4 italic">"JobsWebsites delivered our project on time with exceptional quality. Their team is highly professional and innovative."</p>
+            <div>
+              <span class="font-bold text-emerald-700">Michael Lee</span>
+              <span class="block text-sm text-slate-500">CTO, FinEdge</span>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client Sarah Kim" class="w-16 h-16 rounded-full mb-4 border-4 border-emerald-100" loading="lazy"/>
+            <p class="text-slate-700 mb-4 italic">"Their SEO expertise helped us scale rapidly. We highly recommend JobsWebsites for any web project."</p>
+            <div>
+              <span class="font-bold text-emerald-700">Sarah Kim</span>
+              <span class="block text-sm text-slate-500">CEO, Shoply</span>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Client David Chen" class="w-16 h-16 rounded-full mb-4 border-4 border-emerald-100" loading="lazy"/>
+            <p class="text-slate-700 mb-4 italic">"The website from JobsWebsites transformed our business. Outstanding support and results!"</p>
+            <div>
+              <span class="font-bold text-emerald-700">David Chen</span>
+              <span class="block text-sm text-slate-500">COO, NextGenAI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-emerald-700 mb-8" data-aos="fade-up">Contact Us</h2>
+        <p class="text-center text-slate-600 mb-10" data-aos="fade-up" data-aos-delay="100">
+          Ready to start your digital journey? Fill out the form and our team will get back to you soon.
+        </p>
+        <form class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl shadow-xl p-8 flex flex-col gap-6" data-aos="fade-up" data-aos-delay="200" autocomplete="off" onsubmit="return handleSubmit(event)">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="font-semibold text-slate-700">Name</label>
+            <input id="name" name="name" type="text" required class="rounded-2xl px-5 py-3 border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none transition-all text-slate-700 bg-white" aria-required="true" aria-label="Your Name"/>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-semibold text-slate-700">Email</label>
+            <input id="email" name="email" type="email" required class="rounded-2xl px-5 py-3 border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none transition-all text-slate-700 bg-white" aria-required="true" aria-label="Your Email"/>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="message" class="font-semibold text-slate-700">Message</label>
+            <textarea id="message" name="message" rows="4" required class="rounded-2xl px-5 py-3 border border-emerald-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 outline-none transition-all text-slate-700 bg-white resize-none" aria-required="true" aria-label="Your Message"></textarea>
+          </div>
+          <button type="submit" class="mt-2 px-8 py-3 rounded-2xl bg-emerald-600 text-white font-bold text-lg shadow-lg hover:bg-emerald-700 transition-all duration-200 focus:scale-95 active:scale-95" aria-label="Send Message">
+            <span id="submit-text">Send Message</span>
+            <svg id="submit-spinner" class="w-5 h-5 ml-2 inline-block animate-spin hidden" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="white" stroke-width="4"></circle>
+              <path class="opacity-75" fill="white" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+          </button>
+          <p id="form-success" class="hidden text-green-600 text-center font-semibold mt-2">Thank you! We'll be in touch soon.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-emerald-700 to-emerald-500 text-white py-10 mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2 font-extrabold text-2xl">
+        <span class="bg-gradient-to-r from-emerald-200 to-emerald-400 bg-clip-text text-transparent">JobsWebsites</span>
+      </div>
+      <div class="flex gap-6 text-lg">
+        <a href="https://twitter.com/jobswebsites" class="hover:text-emerald-200 transition" aria-label="Twitter" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.29 3.9A12.13 12.13 0 013 4.8a4.28 4.28 0 001.32 5.71c-.7-.02-1.36-.21-1.94-.53v.05a4.28 4.28 0 003.43 4.2c-.33.09-.68.14-1.04.14-.25 0-.5-.02-.74-.07a4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54a12.13 12.13 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0024 4.59a8.5 8.5 0 01-2.54.7z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/jobswebsites" class="hover:text-emerald-200 transition" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.37-1.56 2.82-1.56 3.02 0 3.58 1.99 3.58 4.58v4.75z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/jobswebsites" class="hover:text-emerald-200 transition" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .98-.31 3.2 1.18a11.1 11.1 0 012.92-.39c.99.01 1.99.13 2.92.39 2.22-1.49 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="text-sm text-emerald-100 text-center md:text-right">
+        &copy; 2024 JobsWebsites. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // Sticky Navbar Shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        navbar.classList.add('shadow-lg', 'bg-white/95');
+      } else {
+        navbar.classList.remove('shadow-lg', 'bg-white/95');
+      }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+    closeMenuBtn.addEventListener('click', closeMenu);
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.length > 1 && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Contact form handler (demo only)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      const spinner = document.getElementById('submit-spinner');
+      const text = document.getElementById('submit-text');
+      spinner.classList.remove('hidden');
+      text.textContent = "Sending...";
+      setTimeout(() => {
+        spinner.classList.add('hidden');
+        text.textContent = "Send Message";
+        document.getElementById('form-success').classList.remove('hidden');
+        setTimeout(() => {
+          document.getElementById('form-success').classList.add('hidden');
+          e.target.reset();
+        }, 2500);
+      }, 1200);
+      return false;
+    }
+  </script>
+</body>
+</html>
